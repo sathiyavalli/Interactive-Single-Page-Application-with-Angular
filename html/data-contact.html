@@ -1,0 +1,66 @@
+<div ng-controller="contactForm">
+<div ng-show="success" class="alert alert-success" id="top"><a href="#" class="close pull-right" data-dismiss="alert" aria-label="close">&times;</a>Mail sent sucessfully.We will get back to you soon!
+		  </div>
+
+<div class="alert alert-danger" ng-show="error"><a href="#" class="close pull-right" data-dismiss="alert" aria-label="close">&times;</a>Mail not sent.Please verify email address that you have entered.</div>
+
+<div class="container data">
+
+        
+    <div class="row ">
+        <div class="col-sm-9 col-sm-offset-3 col-xs-offset-0 col-xs-12">
+        <h2 class="header-green">Contact Us</h2>
+        <div class="col-sm-12 col-xs-12 no-padding" style="line-height: 25px !important;"><div>Reach us here!</div>
+           <div class="col-sm-8 no-padding col-xs-12"> If you have any concerns,questions,suggestions just drop a message.
+               We will get back to you soon.</div>
+            </div>
+            
+<div class="row">&nbsp;</div>
+        <form class="form-horizontal" method="post" role="form"  name="userForm" id="contactform">
+
+
+            <div class="form-group">
+            <label for="inputEmail" class="col-xs-12">Name</label>
+            <div class="col-sm-4 col-xs-12">
+                <input type="text" class="form-control" id="Firstname" placeholder="firstname" required="true" name="name" ng-model="input.name">
+            </div>
+		<div class="row visible-xs-block">&nbsp;</div>
+		<div class="col-sm-4 col-xs-12">
+                <input type="text" class="form-control" id="Lastname" placeholder="lastname" required="true" name="Lname" ng-model = "input.Lname">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class=" col-xs-12">Email</label>
+            <div class="col-sm-8 col-xs-12">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required="true" name="email" ng-model="input.email">
+            </div>
+        </div>
+           
+            <div class="form-group">
+            <label for="inputEmail" class=" col-xs-12">Phone</label>
+            <div class="col-sm-8 col-xs-12">
+                <input type="tel" class="form-control" id="inputPhone" placeholder="Phone" required="true" name="phone" ng-model="input.phone">
+            </div>
+        </div>
+
+	 <div class="form-group">
+            <label for="inputEmail" class=" col-xs-12">Details</label>
+            <div class="col-sm-8 col-xs-12">
+                <textarea placeholder="Details" rows="4" class="form-control" rows="5" required="true" name="message" ng-model="input.message"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6 col-xs-12">
+                <button type="submit" class="btn col-sm-6 col-xs-12" name="submit" ng-click="userForm.$valid && sendMessage(input)" ng-model="input.submit">Submit</button>
+            </div>
+        </div>
+    </form>
+        </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+    </div>
+    
+</div>
+
+
